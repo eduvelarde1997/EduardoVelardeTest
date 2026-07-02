@@ -895,7 +895,6 @@ function setMode(m,scroll){
   [['pPF',pf],['pCL',!pf],['mPF',pf],['mCL',!pf]].forEach(function(a){var b=document.getElementById(a[0]);if(b)b.classList.toggle('on',a[1])});
   try{localStorage.setItem('evmode',m)}catch(e){}
   closeSheet();
-  if(typeof obs==='function')obs();
   if(scroll){var t=document.getElementById('track-'+m);if(t){var y=t.getBoundingClientRect().top+window.pageYOffset-58;window.scrollTo({top:y,behavior:'smooth'})}}
 }
 
